@@ -29,7 +29,6 @@ def done():
               "city": request.form["city"],  
               "phone": request.form["phone"]}
     details = nomi.query_postal_code(request.form['pin'])
-    print(details)
     jobdict["latlon"] = [details['latitude'], details['longitude']]
     coll.insert_one(jobdict)
     return render_template('thankyou.html')
