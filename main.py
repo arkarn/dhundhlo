@@ -135,7 +135,8 @@ def usertype(update: Update, context: CallbackContext) -> int:
         )
         return JOBROLE
     elif usertype == 'employer':
-        update.message.reply_text("Please enter details of your job post here: http://140.238.230.78/")
+        update.message.reply_text("Please enter details of your job post here: http://140.238.230.78/. After filling form, Send /start again to begin.")
+        return ConversationHandler.END
     else:
         update.message.reply_text(
             'Sorry :( we are still adding this functionality! To restart conversation send /start',
