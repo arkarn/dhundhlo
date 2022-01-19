@@ -135,7 +135,7 @@ def usertype(update: Update, context: CallbackContext) -> int:
         )
         return JOBROLE
     elif usertype == 'employer':
-        pass
+        update.message.reply_text("Please enter details of your job post here: http://140.238.230.78/")
     else:
         update.message.reply_text(
             'Sorry :( we are still adding this functionality! To restart conversation send /start',
